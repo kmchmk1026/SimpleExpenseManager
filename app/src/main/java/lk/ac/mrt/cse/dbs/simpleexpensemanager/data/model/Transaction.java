@@ -23,48 +23,46 @@ import java.util.Date;
  */
 public class Transaction {
     private Date date;
+    private String accountNo;
+    private ExpenseType expenseType;
+    private double amount;
 
-    public Date getDate() {
-        return date;
-    }
-
-    public void setDate(Date date) {
+    public Transaction(Date date, String accountNo, ExpenseType expenseType, double amount) {
         this.date = date;
-    }
-
-    public String getAccountNo() {
-        return accountNo;
-    }
-
-    public void setAccountNo(String accountNo) {
         this.accountNo = accountNo;
-    }
-
-    public ExpenseType getExpenseType() {
-        return expenseType;
-    }
-
-    public void setExpenseType(ExpenseType expenseType) {
         this.expenseType = expenseType;
-    }
-
-    public double getAmount() {
-        return amount;
+        this.amount = amount;
     }
 
     public void setAmount(double amount) {
         this.amount = amount;
     }
 
-    private String accountNo;
-    private ExpenseType expenseType;
-    private double amount;
-
-    public Transaction(Date date, String accountNo,
-                       ExpenseType expenseType, double amount) {
-        this.date = date;
-        this.accountNo = accountNo;
+    public void setExpenseType(ExpenseType expenseType) {
         this.expenseType = expenseType;
-        this.amount = amount;
+    }
+
+    public void setAccountNo(String accountNo) {
+        this.accountNo = accountNo;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
+    }
+
+    public double getAmount() {
+        return amount;
+    }
+
+    public ExpenseType getExpenseType() {
+        return expenseType;
+    }
+
+    public String getAccountNo() {
+        return accountNo;
+    }
+
+    public Date getDate() {
+        return date;
     }
 }
